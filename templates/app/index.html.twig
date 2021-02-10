@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+    <h1>Voici la liste des restaurants</h1>
+    <div class="row">
+        {% for restaurant in restaurants %}
+            <div class="col-4 mb-1">
+                <div class="card"><img src="https://picsum.photos/400/400" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ restaurant.name }}</h5>
+                        <p class="card-text">{{ restaurant.city.name }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
